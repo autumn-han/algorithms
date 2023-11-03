@@ -29,5 +29,3 @@ function multSum() {
   }
   return sum;
 }
-
-console.log(multSum());
