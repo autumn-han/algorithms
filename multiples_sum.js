@@ -19,5 +19,15 @@ function multSum(valOne, valTwo, max) {
   return sum;
 }
 
-console.log(multSum(3, 5, 1000));
-// answer: 268335
+// adjusted
+function multSum() {
+  let sum = 0;
+  for (let i = 3; i < 1000; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(multSum());
