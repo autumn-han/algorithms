@@ -20,7 +20,6 @@ function multSum(valOne, valTwo, max) {
   return sum;
 }
 
-// adjusted
 function multSum() {
   let sum = 0;
   for (let i = 3; i < 1000; i++) {
