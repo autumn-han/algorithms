@@ -24,6 +24,6 @@ function evenFibSum() {
       sum += k;
     }
   }
-  // return counter
+  // return sum
   return sum;
 }
