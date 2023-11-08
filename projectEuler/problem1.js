@@ -1,3 +1,4 @@
+// prompt: find the sum of all the multiples of 3 and 5 below 100
 function multSum(valOne, valTwo, max) {
   var sumOne = 0;
   var sumTwo = 0;
@@ -19,5 +20,12 @@ function multSum(valOne, valTwo, max) {
   return sum;
 }
 
-console.log(multSum(3, 5, 1000));
-// answer: 268335
+function multSum() {
+  let sum = 0;
+  for (let i = 3; i < 1000; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
