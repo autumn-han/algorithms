@@ -1,4 +1,5 @@
 // prompt: by considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms
+
 function evenFibSum() {
   // sum: setting a counter for the sum of all even integers in the sequence
   let sum = 0;

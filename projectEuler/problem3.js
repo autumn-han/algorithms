@@ -1,4 +1,5 @@
 // prompt: what is the largest prime factor of the number 600851475143
+
 function largestPrime(num) {
   // isPrime checks to see if number argument is a prime integer by checking to see if the integer has more than one and itself as factors
   function isPrime(wholeNum) {
