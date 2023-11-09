@@ -1,6 +1,6 @@
 // prompt: find the 10001st prime number
 
-// re-using isPrime function
+// importing isPrime function
 function isPrime(wholeNum) {
   var count = 0;
   for (let i = 2; i < wholeNum / 2; i++) {
