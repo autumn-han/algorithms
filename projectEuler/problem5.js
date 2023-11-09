@@ -20,7 +20,7 @@ function smallestMult() {
   var i = 20;
   do {
     isDivisible(i);
-    i += 2;
+    i += 20;
   } while (isDivisible(i) === false);
   return i;
 }
