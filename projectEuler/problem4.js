@@ -1,6 +1,6 @@
 // prompt: find the largest palindrome made from the product of two 3-digit numbers
 
-// helper function isPalindrome(num) to determine if integer is a palindrome
+// determine if integer is a palindrome
 function isPalindrome(num) {
   var count = 0;
   let numArr = String(num).split("").map(Number);
@@ -17,7 +17,7 @@ function isPalindrome(num) {
   }
 }
 
-// helper function largestVal(arr) to find largest value in unsorted array
+// find largest value in unsorted array
 function largestVal(arr) {
   for (let i = 1; i < arr.length; i++) {
     if (arr[0] < arr[i]) {
