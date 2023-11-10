@@ -3,11 +3,11 @@
 // find triplet where a + b + c = 1000;
 
 // check that the values entered fulfill the conditions:
-// 1. a < b < c
-// 2. a^2 + b^2 = c^2
-function isPyTriplet(a, b, c) {
-  if (a < b && b < c) {
-    if (a ** 2 + b ** 2 === c ** 2) {
+// 1. a^2 + b^2 = c^2
+// 2. a + b + c = 1000
+function pyTest(a, b, c) {
+  if (a ** 2 + b ** 2 === c ** 2) {
+    if (a + b + c === 1000) {
       return true;
     } else {
       return false;
@@ -16,15 +16,16 @@ function isPyTriplet(a, b, c) {
     return false;
   }
 }
-
-function pythagoreanTrip() {
-  let sum = 0;
-  let a = 3;
-  let b = 4;
-  let c = 5;
-  while (sum <= 1000) {
-    // check for all values being whole numbers
-    // iterate through potential values of c, then finding b and a from the potential value
-    // run a, b, and c values through isPyTriplet
+// main function
+function pyTrip() {
+  for (let c = 5; c < 1000; c++) {
+    for (let b = 1; b < c; b++) {
+      for (let a = 1; a < b; a++) {
+        if (pyTest(a, b, c) === true) {
+          let z = a * b * c;
+          return z;
+        }
+      }
+    }
   }
 }
