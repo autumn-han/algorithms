@@ -6,12 +6,8 @@
 // 1. a^2 + b^2 = c^2
 // 2. a + b + c = 1000
 function pyTest(a, b, c) {
-  if (a ** 2 + b ** 2 === c ** 2) {
-    if (a + b + c === 1000) {
-      return true;
-    } else {
-      return false;
-    }
+  if (a ** 2 + b ** 2 === c ** 2 && a + b + c === 1000) {
+    return true;
   } else {
     return false;
   }
@@ -29,3 +25,5 @@ function pyTrip() {
     }
   }
 }
+
+console.log(pyTrip());
