@@ -1,5 +1,28 @@
 // prompt: find the sum of all primes below 2 million
 
+// Tanner's isPrime()
+// function isPrime(n) {
+//   const maxFactor = Math.sqrt(n);
+
+//   // Handle the special case of receiving 2
+//   if (n === 2) {
+//     return true;
+//   }
+
+//   // Handle negatives, 0, 1, and even numbers
+//   if (n < 2 || n % 2 === 0) {
+//     return false;
+//   }
+
+//   for (let i = 3; i <= maxFactor; i += 2) {
+//     if (n % i === 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
 // function to determine whether a number is prime
 function isPrime(a) {
   var j = 0;
@@ -7,15 +30,12 @@ function isPrime(a) {
     return false;
   }
   for (let i = 2; i < a / 2; i++) {
+    counter++;
     if (a % i === 0) {
-      j++;
+      return false;
     }
   }
-  if (j !== 0) {
-    return false;
-  } else {
-    return true;
-  }
+  return true;
 }
 
 // main function
