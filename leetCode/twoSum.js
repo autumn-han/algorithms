@@ -6,14 +6,12 @@
 // output: [0,1]
 
 var twoSum = function (nums, target) {
-  let returnArr = [];
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
       if (j !== i) {
         let sum = nums[i] + nums[j];
         if (sum === target) {
-          returnArr[0] = i;
-          returnArr[1] = j;
+          let returnArr = [i, j];
           return returnArr;
         }
       }
