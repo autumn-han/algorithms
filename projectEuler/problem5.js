@@ -1,6 +1,6 @@
 // prompt: find the smallest positive number that is evenly divisible by all of the numbers from 1 to 20
 
-// helper function for checking if integer is divisible by all numbers from 1 to 20
+// checks if integer is divisible by all numbers from 1 to 20
 function isDivisible(int) {
   for (let i = 3; i <= 20; i++) {
     if (int % i !== 0) {
@@ -11,7 +11,7 @@ function isDivisible(int) {
 }
 
 // main function
-function smallestMult() {
+function calcSmallestMult() {
   let i = 20;
   do {
     isDivisible(i);
