@@ -23,10 +23,10 @@ function largestVal(arr) {
 
 // main function
 function largestPal() {
-  let palArr = [];
+  const palArr = [];
   for (let i = 999; i > 99; i--) {
     for (let j = 999; j > 99; j--) {
-      let k = i * j;
+      const k = i * j;
       if (isPalindrome(k) === true) {
         palArr.push(k);
       }
