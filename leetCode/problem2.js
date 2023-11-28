@@ -39,19 +39,9 @@ l2.add(5);
 
 // main function
 function addTwoNumbers(l1, l2) {
-  // take the last node of l1 and move through to head of linked list - store as a string variable
-  // reverse string
-  // concatenate the string with each element in the linked list in a while loop
-  // ^^^ do the above with l2 in a separate while loop ^^^
-  // convert strL1 and strL2 into integers (intL1 and intL2)
-  // find sum of intL1 and intL2 and store as string
-  // reverse sum
-  // split sum into an array
-  // instantiate l3
-  // for each value in array, convert to integer and add to linked list l3
-  // return l3
-  let strL1;
-  let strL2;
+  const lSum = new LinkedList();
+  let strL1 = "";
+  let strL2 = "";
   while (l1.head !== null) {
     strL1 = strL1.concat(l1.head.data);
     l1.head = l1.head.next;
@@ -60,8 +50,16 @@ function addTwoNumbers(l1, l2) {
     strL2 = strL2.concat(l2.head.data);
     l2.head = l2.head.next;
   }
-  reversedIntL1 = strL1.split("").reverse().join("").Number();
-  reversedIntL2 = strL2.split("").reverse().join("").Number();
-  let strSum = toString(reversedIntL1 + reversedIntL2);
-  let reversedStrSum = strSum.reverse();
+  let reversedIntL1 = Number(strL1.split("").reverse().join(""));
+  let reversedIntL2 = Number(strL2.split("").reverse().join(""));
+  let sum = reversedIntL1 + reversedIntL2;
+  let strSum = sum.toString();
+  const strSumArr = strSum.split("");
+  for (let i = 0; i < strSumArr.length; i++) {
+    const val = Number(strSumArr[i]);
+    lSum.add(val);
+  }
+  return lSum;
 }
+
+console.log(addTwoNumbers(l1, l2));
